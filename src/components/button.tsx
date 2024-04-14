@@ -4,9 +4,10 @@ import { Text, TouchableOpacity, ActivityIndicator, TouchableOpacityProps } from
 type Props = TouchableOpacityProps & {
   title: string
   isLoading?: boolean
+  event?: string
 }
 
-export function Button({title, isLoading = false, ...rest }: Props){
+export function Button({event, title, isLoading = false, ...rest }: Props){
   return(
     <TouchableOpacity 
     activeOpacity={0.6}
@@ -22,7 +23,9 @@ export function Button({title, isLoading = false, ...rest }: Props){
         
         <Text className="text-gray-300 text-base font-bold uppercase">
         {title}
+        {event}
       </Text>
+
      ) }
     </TouchableOpacity>
   )

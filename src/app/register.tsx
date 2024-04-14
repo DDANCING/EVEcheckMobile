@@ -18,7 +18,6 @@ export default function Register() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-
   const badgeStore = useBadgeStore()
 
   async function handleRegister() {
@@ -62,7 +61,7 @@ export default function Register() {
   }
 
   return (
-    <View className="flex-1 bg-green-500 items-center justify-center p-8">
+    <View className="flex-1 bg-gray-300 items-center justify-center p-8">
       <StatusBar barStyle="light-content" />
 
       <Image
